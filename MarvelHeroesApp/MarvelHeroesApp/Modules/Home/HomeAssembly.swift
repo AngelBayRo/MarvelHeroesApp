@@ -20,7 +20,7 @@ class HomeAssembly: BaseAssembly {
                                           router: HomeRouter.self,
                                           interactor: HomeInteractor.self)
         viper.interactor.homeAssemblyDTO = assemblyDTO
-        //viper.interactor.homeProvider = DataAssembly.homeProvider(interactor: viper.interactor)
+        viper.interactor.provider = HomeProvider()
         return view
     }
 }

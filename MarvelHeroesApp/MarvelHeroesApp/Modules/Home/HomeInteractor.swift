@@ -9,7 +9,8 @@
 import Foundation
 
 protocol HomeInteractorInputProtocol: BaseInteractorInputProtocol {
-
+  func getHeroes()
+  func setActualImageHero(data: Data)
 }
 
 class HomeInteractor: BaseInteractor {
@@ -22,5 +23,19 @@ class HomeInteractor: BaseInteractor {
 }
 
 extension HomeInteractor: HomeInteractorInputProtocol {
-    
+  func getHeroes() {
+    self.provider?.getCharacters(success: { serverModel in
+      let businessModel: [SuperheroBusinessModel] = serverModel?.data.results.map({ SuperheroBusinessModel(serverModel: $0) }) ?? []
+
+      self.presenter?.setHeroesContent(content: businessModel)
+    }, failure: {
+      self.presenter?.showGetHeroesError()
+    })
+  }
+
+  func setActualImageHero(data: Data) {
+    var sharedManager: SharedManagerProtocol = SharedManager.shared
+
+    sharedManager.imageData = data
+  }
 }

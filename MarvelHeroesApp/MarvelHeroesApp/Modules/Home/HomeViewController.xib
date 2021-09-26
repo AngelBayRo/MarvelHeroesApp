@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MarvelHeroesApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="r3S-lv-H1Y" id="aYW-wD-2uf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,14 +18,26 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r3S-lv-H1Y">
+                    <rect key="frame" x="0.0" y="35" width="414" height="836"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="r3S-lv-H1Y" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="bcm-RZ-LKe"/>
+                <constraint firstItem="r3S-lv-H1Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dxV-MC-JH8"/>
+                <constraint firstItem="r3S-lv-H1Y" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jy4-eh-fDs"/>
+                <constraint firstItem="r3S-lv-H1Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="tbj-ep-PeM"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="139"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

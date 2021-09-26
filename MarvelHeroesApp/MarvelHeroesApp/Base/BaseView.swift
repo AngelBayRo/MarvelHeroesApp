@@ -12,15 +12,18 @@ class BaseView: UIViewController {
     internal var basePresenter: BasePresenterProtocol?
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+      super.viewDidLoad()
+      basePresenter?.viewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+      super.viewWillAppear(animated)
+      basePresenter?.viewWillAppear(animated: animated)
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+      super.viewDidAppear(animated)
+      basePresenter?.viewDidAppear(animated: animated)
     }
 }
 

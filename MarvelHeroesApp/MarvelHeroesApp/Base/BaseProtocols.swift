@@ -19,18 +19,18 @@ protocol BaseViewProtocol: AnyObject {
 // Protocol used to the View can communicate with Presenter
 protocol BasePresenterProtocol: AnyObject {
     func viewDidLoad()
-    func viewWillAppear(isFirstPresentation: Bool)
-    func viewDidAppear(isFirstPresentation: Bool)
+    func viewWillAppear(animated: Bool)
+    func viewDidAppear(animated: Bool)
 }
 
 extension BasePresenterProtocol {
     func viewDidLoad() {
         // Optional method
     }
-    func viewWillAppear(isFirstPresentation: Bool) {
+    func viewWillAppear(animated: Bool) {
         // Optional method
     }
-    func viewDidAppear(isFirstPresentation: Bool) {
+    func viewDidAppear(animated: Bool) {
         // Optional method
     }
 }
@@ -48,4 +48,20 @@ protocol BaseInteractorOutputProtocol: AnyObject {
 // Protocol used to the Presenter can communicate with Router
 protocol BaseRouterProtocol: AnyObject {
 
+}
+
+// Base class used for encode params
+protocol BaseProviderParamsDTO: Codable {
+
+}
+
+extension BaseProviderParamsDTO {
+    func encode() -> [String: Any] {
+
+        guard let jsonData = try? JSONEncoder().encode(self),
+            let json = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
+            else { return [String: Any]() }
+
+      return json
+    }
 }

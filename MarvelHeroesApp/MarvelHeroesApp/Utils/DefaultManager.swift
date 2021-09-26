@@ -11,7 +11,7 @@ import UIKit
 class DefaultManager: NSObject {
 
     static func getBaseUrl() -> String {
-        return "https://developer.marvel.com/docs"
+        return "http://gateway.marvel.com"
     }
 
     static func print(_ items: Any..., separator: String = " ", terminator: String = "\n") {

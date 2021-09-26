@@ -36,4 +36,13 @@ class BaseRouter {
             }
         }
     }
+
+  // MARK: PRIVATE BASE
+  internal func pushViewController(_ viewControllerToPresent: UIViewController, animated flag: Bool) {
+      self.baseView?.navigationController?.pushViewController(viewControllerToPresent, animated: flag)
+  }
+
+  internal func popViewController(animated: Bool) {
+      self.baseView?.navigationController?.popViewController(animated: animated)
+  }
 }

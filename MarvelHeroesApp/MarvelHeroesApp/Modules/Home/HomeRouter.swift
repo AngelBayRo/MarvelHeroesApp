@@ -9,7 +9,7 @@
 import UIKit
 
 protocol HomeRouterProtocol: BaseRouterProtocol {
-    
+  func goToHero(dto: SuperheroAssemblyDTO)
 }
 
 final class HomeRouter: BaseRouter {
@@ -19,5 +19,7 @@ final class HomeRouter: BaseRouter {
 }
 
 extension HomeRouter: HomeRouterProtocol {
-    
+  func goToHero(dto: SuperheroAssemblyDTO) {
+    self.pushViewController(SuperheroAssembly.superheroView(assemblyDTO: dto), animated: true)
+  }
 }
