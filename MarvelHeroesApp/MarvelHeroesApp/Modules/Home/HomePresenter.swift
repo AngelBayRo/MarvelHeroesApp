@@ -34,7 +34,7 @@ class HomePresenter: BasePresenter {
     return super.baseInteractor as? HomeInteractorInputProtocol
   }
 
-  var contentModel: [SuperheroBusinessModel]?
+  var contentModel: [SuperheroBusinessModel]? = []
 }
 
 // MARK: - HomeViewProtocol
@@ -70,7 +70,7 @@ extension HomePresenter: HomePresenterProtocol {
 // MARK: - HomeInteractorOutputProtocol
 extension HomePresenter: HomeInteractorOutputProtocol {
   func setHeroesContent(content: [SuperheroBusinessModel]) {
-    self.contentModel = content
+    self.contentModel?.append(contentsOf: content)
     self.view?.reloadTable()
   }
 

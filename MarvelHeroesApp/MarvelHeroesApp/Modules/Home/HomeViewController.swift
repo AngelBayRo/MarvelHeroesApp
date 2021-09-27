@@ -21,6 +21,7 @@ class HomeViewController: BaseView {
   }
 
   @IBOutlet weak var emptyView: UIView!
+  @IBOutlet weak var viewContent: UIView!
   @IBOutlet weak var tableView: UITableView!
 
   private var animationView: AnimationView?
@@ -58,13 +59,13 @@ class HomeViewController: BaseView {
 
 extension HomeViewController: HomeViewProtocol {
   func reloadTable() {
-    self.tableView.isHidden = false
+    self.viewContent.isHidden = false
     self.tableView.reloadData()
     closeAnimate()
   }
 
   func showEmptyState() {
-    self.tableView.isHidden = true
+    self.viewContent.isHidden = true
     self.emptyView.isHidden = false
     closeAnimate()
   }
@@ -95,5 +96,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
     self.presenter?.setActualImage(data: cell?.imageData ?? Data())
     self.presenter?.goToHero(position: indexPath.row)
+  }
+
+  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    if indexPath.row >= (self.presenter?.getHeroesCount() ?? 20) - 20 {
+      MarvelUtils.setOffset(newOffset: 20)
+      self.presenter?.viewDidLoad()
+    }
   }
 }

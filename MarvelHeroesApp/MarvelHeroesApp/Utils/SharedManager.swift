@@ -9,10 +9,13 @@ import Foundation
 
 protocol SharedManagerProtocol {
   var imageData: Data? { get set }
+  var offset: Int? { get set }
 }
 
 class SharedManager: SharedManagerProtocol {
   static let shared = SharedManager()
 
   var imageData: Data?
+
+  var offset: Int? = 0
 }
