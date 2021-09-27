@@ -10,13 +10,25 @@ import Foundation
 class MarvelUtils {
   static func getURLParams() -> String {
     let timestamp = Date().timeIntervalSince1970.description
-    let publicKey = "a3ea4b8415ce93ad98226f4982ad1129"
-    let privateKey = "37913096b9c9cbc331a6ce3e4aee395bde488cae"
+    let publicKey = "MARVEL_PUBLIC_API_KEY"
+    let privateKey = "MARVEL_PRIVATE_API_KEY"
 
-    let hash = "\(timestamp)\(privateKey)\(publicKey)".md5
+    let publicKeyValue = self.value(key: publicKey)
+    let privateKeyValue = self.value(key: privateKey)
 
-    let url = "?ts=\(timestamp)&apikey=\(publicKey)&hash=\(hash)"
+    let hash = "\(timestamp)\(privateKeyValue)\(publicKeyValue)".md5
+
+    let url = "?ts=\(timestamp)&apikey=\(publicKeyValue)&hash=\(hash)"
 
     return url
+  }
+
+  static func value(key: String) -> String {
+      let environment = ProcessInfo.processInfo.environment
+      if let environmentValueString = environment[key] {
+        return environmentValueString
+      } else {
+        return ""
+    }
   }
 }

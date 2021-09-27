@@ -14,8 +14,8 @@ protocol HomeProviderProtocol: AnyObject {
 
 final class HomeProvider: BaseProvider, HomeProviderProtocol {
   func getCharacters(success: @escaping (Superheroes?) -> Void, failure: @escaping () -> Void) {
-    var endpoint = "\(HomeProviderConstants.HomeProviderRequest.endpoint)"
-    endpoint.append(MarvelUtils.getURLParams())
+    let endpoint = "\(HomeProviderConstants.HomeProviderRequest.endpoint)"
+    //endpoint.append(MarvelUtils.getURLParams())
     
     let dto = ProviderDTO(params: nil,
                           method: HomeProviderConstants.HomeProviderRequest.method,

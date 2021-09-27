@@ -72,7 +72,8 @@ class BaseProvider {
                                   failure: @escaping() -> Void) -> URLSessionTask? {
 
         let baseURL = DefaultManager.getBaseUrl()
-        let endpoint = "\(baseURL)\(dto.endpoint)"
+        var endpoint = "\(baseURL)\(dto.endpoint)"
+        endpoint.append(MarvelUtils.getURLParams())
 
         var headers: HTTPHeaders = ["Content-Type": "application/json"]
         let parameters: [String: Any]? = dto.params

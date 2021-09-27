@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MarvelHeroesApp" customModuleProvider="target">
             <connections>
+                <outlet property="emptyView" destination="a7e-sm-RlW" id="wFR-Ph-oBw"/>
                 <outlet property="tableView" destination="r3S-lv-H1Y" id="aYW-wD-2uf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,23 +20,53 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r3S-lv-H1Y">
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r3S-lv-H1Y">
                     <rect key="frame" x="0.0" y="35" width="414" height="836"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7e-sm-RlW" userLabel="EmptyView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hydra" translatesAutoresizingMaskIntoConstraints="NO" id="QIR-q4-D1T">
+                            <rect key="frame" x="70" y="50" width="274" height="286.5"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hydra is attacking your services!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtq-yk-uQe">
+                            <rect key="frame" x="70" y="386.5" width="274" height="90"/>
+                            <fontDescription key="fontDescription" name="Rockwell-BoldItalic" family="Rockwell" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="vtq-yk-uQe" firstAttribute="centerX" secondItem="QIR-q4-D1T" secondAttribute="centerX" id="84n-sB-thR"/>
+                        <constraint firstItem="QIR-q4-D1T" firstAttribute="height" secondItem="a7e-sm-RlW" secondAttribute="height" multiplier="0.35" id="8LP-Tx-ufJ"/>
+                        <constraint firstItem="QIR-q4-D1T" firstAttribute="centerX" secondItem="a7e-sm-RlW" secondAttribute="centerX" id="9y7-EK-egZ"/>
+                        <constraint firstItem="QIR-q4-D1T" firstAttribute="top" secondItem="a7e-sm-RlW" secondAttribute="top" constant="50" id="PQu-2E-Jfd"/>
+                        <constraint firstItem="QIR-q4-D1T" firstAttribute="leading" secondItem="a7e-sm-RlW" secondAttribute="leading" constant="70" id="Smt-T5-RLz"/>
+                        <constraint firstItem="vtq-yk-uQe" firstAttribute="top" secondItem="QIR-q4-D1T" secondAttribute="bottom" constant="50" id="X5g-Yl-qL3"/>
+                        <constraint firstItem="vtq-yk-uQe" firstAttribute="leading" secondItem="QIR-q4-D1T" secondAttribute="leading" id="o5J-k8-uJE"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="a7e-sm-RlW" firstAttribute="centerY" secondItem="r3S-lv-H1Y" secondAttribute="centerY" id="0pg-ku-WYV"/>
+                <constraint firstItem="a7e-sm-RlW" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7Hk-dL-888"/>
                 <constraint firstItem="r3S-lv-H1Y" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="bcm-RZ-LKe"/>
                 <constraint firstItem="r3S-lv-H1Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dxV-MC-JH8"/>
+                <constraint firstItem="a7e-sm-RlW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ggE-7w-2yU"/>
                 <constraint firstItem="r3S-lv-H1Y" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="jy4-eh-fDs"/>
+                <constraint firstItem="a7e-sm-RlW" firstAttribute="centerX" secondItem="r3S-lv-H1Y" secondAttribute="centerX" id="nXL-av-QOo"/>
                 <constraint firstItem="r3S-lv-H1Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="tbj-ep-PeM"/>
             </constraints>
             <point key="canvasLocation" x="139" y="139"/>
         </view>
     </objects>
     <resources>
+        <image name="Hydra" width="2067" height="2067"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -4,6 +4,7 @@ def shared_pods
     use_frameworks!
     inhibit_all_warnings!
     pod 'Alamofire'
+    pod 'lottie-ios'
 
 end
 target 'MarvelHeroesApp' do

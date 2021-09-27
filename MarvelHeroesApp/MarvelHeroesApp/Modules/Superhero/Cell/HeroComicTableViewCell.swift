@@ -10,16 +10,21 @@ import UIKit
 class HeroComicTableViewCell: UITableViewCell {
 
   @IBOutlet weak var comicNameLabel: UILabel!
-  
+
+  var model: HeroComicCellModel?
+
   override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  override func prepareForReuse() {
+    super.prepareForReuse()
 
-        // Configure the view for the selected state
-    }
-    
+    self.comicNameLabel.text = ""
+  }
+
+  func configure(cellModel: HeroComicCellModel) {
+    self.model = cellModel
+    self.comicNameLabel.text = cellModel.name
+  }
 }

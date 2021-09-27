@@ -10,7 +10,7 @@ import Foundation
 class HeroComicCellModel {
   var name: String?
 
-  init(model: ComicsItem) {
+  init(model: HeroComicBusinessModel) {
     self.name = model.name
   }
 }

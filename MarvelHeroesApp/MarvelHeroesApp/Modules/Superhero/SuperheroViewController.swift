@@ -9,37 +9,80 @@ import UIKit
 
 protocol SuperheroViewProtocol: BaseViewProtocol {
   func setHeroImage(data: Data)
+  func setName(name: String)
+  func setDescription(description: String)
+  func reloadTable()
 }
 
 class SuperheroViewController: BaseView {
-    
-    // MARK: VIPER Dependencies
-    var presenter: SuperheroPresenterProtocol? {
-        return super.basePresenter as? SuperheroPresenterProtocol
-    }
+
+  // MARK: VIPER Dependencies
+  var presenter: SuperheroPresenterProtocol? {
+    return super.basePresenter as? SuperheroPresenterProtocol
+  }
   
   @IBOutlet weak var imageHero: UIImageView!
   @IBOutlet weak var labelNameHero: UILabel!
-  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
+  @IBOutlet weak var descriptionLabel: UILabel!
 
-    @IBAction func goBack(_ sender: Any) {
-        self.presenter?.goBack()
-    }
+  @IBOutlet weak var tableView: UITableView!
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    tableView.register(UINib.init(nibName: "HeroComicTableViewCell", bundle: nil), forCellReuseIdentifier: "HeroComicTableViewCell")
+    tableView.dataSource = self
+    tableView.delegate = self
+  }
+
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+  }
+
+  @IBAction func goBack(_ sender: Any) {
+    self.presenter?.goBack()
+  }
 
   @IBAction func moreInfoAction(_ sender: Any) {
-
+    self.presenter?.getUrlMoreInfo()
   }
 }
 
 extension SuperheroViewController: SuperheroViewProtocol {
   func setHeroImage(data: Data) {
     self.imageHero.image = UIImage(data: data, scale:1)
+  }
+
+  func setName(name: String) {
+    self.labelNameHero.text = name
+  }
+
+  func setDescription(description: String) {
+    self.descriptionLabel.text = description
+  }
+
+  func reloadTable() {
+    self.tableView.reloadData()
+  }
+}
+
+extension SuperheroViewController: UITableViewDataSource, UITableViewDelegate {
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.presenter?.getComicsCount() ?? 0
+  }
+
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "HeroComicTableViewCell", for: indexPath) as? HeroComicTableViewCell ?? HeroComicTableViewCell()
+    let businessModel = self.presenter?.getComicsData(position: indexPath.row) ?? HeroComicBusinessModel()
+
+    let cellModel = HeroComicCellModel(model: businessModel)
+
+    cell.configure(cellModel: cellModel)
+
+    return cell
+  }
+
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+      return 60
   }
 }

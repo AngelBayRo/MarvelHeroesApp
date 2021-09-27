@@ -55,6 +55,7 @@ extension HomePresenter: HomePresenterProtocol {
     if let hero = contentModel?[position] {
       let heroDTO = SuperheroAssemblyDTO(characterImageThumb: hero.imageThumb,
                                          name: hero.name ?? "",
+                                         description: hero.description ?? "",
                                          comics: hero.comics,
                                          urlMore: hero.url)
       self.router?.goToHero(dto: heroDTO)
@@ -74,6 +75,6 @@ extension HomePresenter: HomeInteractorOutputProtocol {
   }
 
   func showGetHeroesError() {
-
+    self.view?.showEmptyState()
   }
 }

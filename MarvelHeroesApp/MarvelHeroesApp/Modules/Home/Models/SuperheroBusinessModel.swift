@@ -10,6 +10,7 @@ import Foundation
 class SuperheroBusinessModel {
   var id: Int?
   var name: String?
+  var description: String?
   var comics: Comics?
   var url: URLElement?
   var imageThumb: Thumbnail?
@@ -19,6 +20,7 @@ class SuperheroBusinessModel {
   init(serverModel: Result) {
     self.id = serverModel.id
     self.name = serverModel.name
+    self.description = serverModel.resultDescription
     self.comics = serverModel.comics
     self.url = serverModel.urls.first
     self.imageThumb = serverModel.thumbnail

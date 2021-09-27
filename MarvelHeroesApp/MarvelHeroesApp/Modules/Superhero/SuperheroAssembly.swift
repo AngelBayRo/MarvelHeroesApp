@@ -27,6 +27,7 @@ class SuperheroAssembly: BaseAssembly {
 struct SuperheroAssemblyDTO {
   let characterImageThumb: Thumbnail?
   let name: String
+  let description: String
   let comics: Comics?
   let urlMore: URLElement?
 }
