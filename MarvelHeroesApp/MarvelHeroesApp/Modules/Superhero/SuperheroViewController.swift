@@ -24,6 +24,7 @@ class SuperheroViewController: BaseView {
   @IBOutlet weak var imageHero: UIImageView!
   @IBOutlet weak var labelNameHero: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
+  @IBOutlet weak var backButton: UIButton!
 
   @IBOutlet weak var tableView: UITableView!
   
@@ -35,10 +36,6 @@ class SuperheroViewController: BaseView {
     tableView.delegate = self
   }
 
-  override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-  }
-
   @IBAction func goBack(_ sender: Any) {
     self.presenter?.goBack()
   }
@@ -46,23 +43,28 @@ class SuperheroViewController: BaseView {
   @IBAction func moreInfoAction(_ sender: Any) {
     self.presenter?.getUrlMoreInfo()
   }
+
+  func configureButton() {
+    backButton.layer.cornerRadius = 20
+    backButton.layer.masksToBounds = false
+  }
 }
 
 extension SuperheroViewController: SuperheroViewProtocol {
   func setHeroImage(data: Data) {
-    self.imageHero.image = UIImage(data: data, scale:1)
+    imageHero.image = UIImage(data: data, scale:1)
   }
 
   func setName(name: String) {
-    self.labelNameHero.text = name
+    labelNameHero.text = name
   }
 
   func setDescription(description: String) {
-    self.descriptionLabel.text = description
+    descriptionLabel.text = description
   }
 
   func reloadTable() {
-    self.tableView.reloadData()
+    tableView.reloadData()
   }
 }
 

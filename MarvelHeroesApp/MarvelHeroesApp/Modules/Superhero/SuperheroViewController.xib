@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SuperheroViewController" customModule="MarvelHeroesApp" customModuleProvider="target">
             <connections>
+                <outlet property="backButton" destination="mN8-Pm-O7b" id="SVm-7p-bmu"/>
                 <outlet property="descriptionLabel" destination="ehX-od-Jjd" id="kf8-52-V0A"/>
                 <outlet property="imageHero" destination="A4P-6F-ZMF" id="tVn-yc-INP"/>
                 <outlet property="labelNameHero" destination="tgZ-3e-ap9" id="msv-QT-CjH"/>
@@ -28,13 +29,15 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mN8-Pm-O7b">
                     <rect key="frame" x="20" y="54" width="40" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="7y3-rG-DZB"/>
                         <constraint firstAttribute="width" secondItem="mN8-Pm-O7b" secondAttribute="height" multiplier="1:1" id="lZj-zy-cbR"/>
                     </constraints>
-                    <color key="tintColor" systemColor="labelColor"/>
+                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal">
-                        <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large" renderingMode="template"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="image" image="arrowshape.turn.up.backward.circle.fill" catalog="system" symbolScale="large"/>
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                     </state>
                     <connections>
@@ -134,10 +137,7 @@
         </view>
     </objects>
     <resources>
-        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="arrowshape.turn.up.backward.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -99,8 +99,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
   }
 
   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    if indexPath.row >= (self.presenter?.getHeroesCount() ?? 20) - 20 {
-      MarvelUtils.setOffset(newOffset: 20)
+    if indexPath.row == (self.presenter?.getHeroesCount() ?? 0) - 10 {
+      MarvelUtils.setOffset(newOffset: 30)
       self.presenter?.viewDidLoad()
     }
   }
