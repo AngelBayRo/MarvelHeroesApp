@@ -8,8 +8,7 @@
 import Foundation
 import Alamofire
 
-class BaseProvider {
-
+class BaseProvider: BaseProviderProtocol {
     enum ProviderType: Int {
         case json = 0
         case xml = 1
@@ -62,14 +61,14 @@ class BaseProvider {
       return session
     }
 
-    // MARK: INTERNAL
-    internal func getProviderData(dto: ProviderDTO,
-                                  timeout: TimeInterval = 60,
-                                  loader: Bool = true,
-                                  printLog: Bool = true,
-                                  additionalHeader: [ String: String] = [:],
-                                  success: @escaping(Data, Int) -> Void,
-                                  failure: @escaping() -> Void) -> URLSessionTask? {
+    // MARK: EXTENSION
+    func getProviderData(dto: ProviderDTO,
+                          timeout: TimeInterval = 60,
+                          loader: Bool = true,
+                          printLog: Bool = true,
+                          additionalHeader: [String: String] = [:],
+                          success: @escaping(Data, Int) -> Void,
+                          failure: @escaping() -> Void) -> URLSessionTask? {
 
         let baseURL = DefaultManager.getBaseUrl()
         var endpoint = "\(baseURL)\(dto.endpoint)"
@@ -174,7 +173,6 @@ class BaseProvider {
         return request.task
     }
 
-    // Remove square brackets for GET request
     struct CustomGetEncoding: ParameterEncoding {
         var arrayParams: [[String: Any]]?
 

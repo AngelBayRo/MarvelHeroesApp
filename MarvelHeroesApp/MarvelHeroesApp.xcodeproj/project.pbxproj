@@ -11,11 +11,23 @@
 		98257E5927012310007AA8FA /* SharedManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98257E5827012310007AA8FA /* SharedManager.swift */; };
 		98257E5B2701275C007AA8FA /* HeroComicCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98257E5A2701275C007AA8FA /* HeroComicCellModel.swift */; };
 		985B89D62701B5B400CA2DB6 /* HeroComicBusinessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985B89D52701B5B400CA2DB6 /* HeroComicBusinessModel.swift */; };
+		98670CE027030A2200898EB1 /* HomeRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CD327030A2100898EB1 /* HomeRouterMock.swift */; };
+		98670CE127030A2200898EB1 /* HomePresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CD427030A2100898EB1 /* HomePresenterMock.swift */; };
+		98670CE227030A2200898EB1 /* HomeProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CD527030A2100898EB1 /* HomeProviderMock.swift */; };
+		98670CE327030A2200898EB1 /* HomePresenterInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CD627030A2100898EB1 /* HomePresenterInteractorMock.swift */; };
+		98670CE427030A2200898EB1 /* HomeViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CD727030A2100898EB1 /* HomeViewMock.swift */; };
+		98670CE527030A2200898EB1 /* HomeInteractorPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CD827030A2100898EB1 /* HomeInteractorPresenterMock.swift */; };
+		98670CE727030A2200898EB1 /* HomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CDA27030A2100898EB1 /* HomeRouterTests.swift */; };
+		98670CE927030A2200898EB1 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CDC27030A2100898EB1 /* HomeInteractorTests.swift */; };
+		98670CEB27030A2200898EB1 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CDE27030A2100898EB1 /* HomePresenterTests.swift */; };
+		98670CEC27030A2200898EB1 /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CDF27030A2100898EB1 /* HomeViewTests.swift */; };
+		98670CF027031C2F00898EB1 /* NavigationViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CEF27031C2F00898EB1 /* NavigationViewControllerMock.swift */; };
+		98670CF327031C8B00898EB1 /* GlobalFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CF227031C8B00898EB1 /* GlobalFunctions.swift */; };
+		98670CF527031EB600898EB1 /* HomeBaseProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98670CF427031EB600898EB1 /* HomeBaseProviderMock.swift */; };
 		98942B3E26FF8E9700BD9D98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98942B3D26FF8E9700BD9D98 /* AppDelegate.swift */; };
 		98942B4826FF8E9700BD9D98 /* MarvelHeroesApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98942B4626FF8E9700BD9D98 /* MarvelHeroesApp.xcdatamodeld */; };
 		98942B4A26FF8E9A00BD9D98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98942B4926FF8E9A00BD9D98 /* Assets.xcassets */; };
 		98942B4D26FF8E9A00BD9D98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98942B4B26FF8E9A00BD9D98 /* LaunchScreen.storyboard */; };
-		98942B5826FF8E9B00BD9D98 /* MarvelHeroesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98942B5726FF8E9B00BD9D98 /* MarvelHeroesAppTests.swift */; };
 		98942B6326FF8E9B00BD9D98 /* MarvelHeroesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98942B6226FF8E9B00BD9D98 /* MarvelHeroesAppUITests.swift */; };
 		98942B8826FF910B00BD9D98 /* BaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98942B8126FF910B00BD9D98 /* BaseProvider.swift */; };
 		98942B8926FF910B00BD9D98 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98942B8226FF910B00BD9D98 /* BaseView.swift */; };
@@ -76,6 +88,19 @@
 		98257E5827012310007AA8FA /* SharedManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedManager.swift; sourceTree = "<group>"; };
 		98257E5A2701275C007AA8FA /* HeroComicCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroComicCellModel.swift; sourceTree = "<group>"; };
 		985B89D52701B5B400CA2DB6 /* HeroComicBusinessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroComicBusinessModel.swift; sourceTree = "<group>"; };
+		98670CD327030A2100898EB1 /* HomeRouterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouterMock.swift; sourceTree = "<group>"; };
+		98670CD427030A2100898EB1 /* HomePresenterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenterMock.swift; sourceTree = "<group>"; };
+		98670CD527030A2100898EB1 /* HomeProviderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeProviderMock.swift; sourceTree = "<group>"; };
+		98670CD627030A2100898EB1 /* HomePresenterInteractorMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenterInteractorMock.swift; sourceTree = "<group>"; };
+		98670CD727030A2100898EB1 /* HomeViewMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewMock.swift; sourceTree = "<group>"; };
+		98670CD827030A2100898EB1 /* HomeInteractorPresenterMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractorPresenterMock.swift; sourceTree = "<group>"; };
+		98670CDA27030A2100898EB1 /* HomeRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeRouterTests.swift; sourceTree = "<group>"; };
+		98670CDC27030A2100898EB1 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
+		98670CDE27030A2100898EB1 /* HomePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		98670CDF27030A2100898EB1 /* HomeViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewTests.swift; sourceTree = "<group>"; };
+		98670CEF27031C2F00898EB1 /* NavigationViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerMock.swift; sourceTree = "<group>"; };
+		98670CF227031C8B00898EB1 /* GlobalFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFunctions.swift; sourceTree = "<group>"; };
+		98670CF427031EB600898EB1 /* HomeBaseProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBaseProviderMock.swift; sourceTree = "<group>"; };
 		98942B3A26FF8E9700BD9D98 /* MarvelHeroesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelHeroesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98942B3D26FF8E9700BD9D98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98942B4726FF8E9700BD9D98 /* MarvelHeroesApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MarvelHeroesApp.xcdatamodel; sourceTree = "<group>"; };
@@ -83,7 +108,6 @@
 		98942B4C26FF8E9A00BD9D98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98942B4E26FF8E9A00BD9D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98942B5326FF8E9B00BD9D98 /* MarvelHeroesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelHeroesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		98942B5726FF8E9B00BD9D98 /* MarvelHeroesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelHeroesAppTests.swift; sourceTree = "<group>"; };
 		98942B5926FF8E9B00BD9D98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		98942B5E26FF8E9B00BD9D98 /* MarvelHeroesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelHeroesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98942B6226FF8E9B00BD9D98 /* MarvelHeroesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelHeroesAppUITests.swift; sourceTree = "<group>"; };
@@ -159,12 +183,77 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9822C47F27034F9100FF41FC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9822C48027034F9800FF41FC /* Mocks */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9822C48027034F9800FF41FC /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				98670CF427031EB600898EB1 /* HomeBaseProviderMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		985B89D42701B57B00CA2DB6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				985B89D52701B5B400CA2DB6 /* HeroComicBusinessModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		98670CD127030A2100898EB1 /* HomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				98670CD227030A2100898EB1 /* Mocks */,
+				98670CDC27030A2100898EB1 /* HomeInteractorTests.swift */,
+				98670CDA27030A2100898EB1 /* HomeRouterTests.swift */,
+				98670CDE27030A2100898EB1 /* HomePresenterTests.swift */,
+				98670CDF27030A2100898EB1 /* HomeViewTests.swift */,
+			);
+			path = HomeTests;
+			sourceTree = "<group>";
+		};
+		98670CD227030A2100898EB1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				98670CD527030A2100898EB1 /* HomeProviderMock.swift */,
+				98670CD827030A2100898EB1 /* HomeInteractorPresenterMock.swift */,
+				98670CD327030A2100898EB1 /* HomeRouterMock.swift */,
+				98670CD427030A2100898EB1 /* HomePresenterMock.swift */,
+				98670CD627030A2100898EB1 /* HomePresenterInteractorMock.swift */,
+				98670CD727030A2100898EB1 /* HomeViewMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		98670CED27031C0200898EB1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				98670CEE27031C0A00898EB1 /* Mocks */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		98670CEE27031C0A00898EB1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				98670CEF27031C2F00898EB1 /* NavigationViewControllerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		98670CF127031C7900898EB1 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				98670CF227031C8B00898EB1 /* GlobalFunctions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		98942B3126FF8E9700BD9D98 = {
@@ -192,6 +281,7 @@
 		98942B3C26FF8E9700BD9D98 /* MarvelHeroesApp */ = {
 			isa = PBXGroup;
 			children = (
+				98670CF127031C7900898EB1 /* Utilities */,
 				98D9022F2702014E00381480 /* Lotties */,
 				98942B9126FF914300BD9D98 /* Extensions */,
 				98942B8F26FF914300BD9D98 /* Utils */,
@@ -209,7 +299,9 @@
 		98942B5626FF8E9B00BD9D98 /* MarvelHeroesAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				98942B5726FF8E9B00BD9D98 /* MarvelHeroesAppTests.swift */,
+				9822C47F27034F9100FF41FC /* Base */,
+				98670CED27031C0200898EB1 /* Extensions */,
+				98670CD127030A2100898EB1 /* HomeTests */,
 				98942B5926FF8E9B00BD9D98 /* Info.plist */,
 			);
 			path = MarvelHeroesAppTests;
@@ -417,6 +509,7 @@
 					};
 					98942B5226FF8E9B00BD9D98 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = 98942B3926FF8E9700BD9D98;
 					};
 					98942B5D26FF8E9B00BD9D98 = {
@@ -538,6 +631,7 @@
 				98DF38C62700DB3000BFFDBC /* MarvelUtils.swift in Sources */,
 				98942BA326FF914300BD9D98 /* HomeRouter.swift in Sources */,
 				98942B9C26FF914300BD9D98 /* DefaultManager.swift in Sources */,
+				98670CF327031C8B00898EB1 /* GlobalFunctions.swift in Sources */,
 				98942B3E26FF8E9700BD9D98 /* AppDelegate.swift in Sources */,
 				98DF38D92700FE8300BFFDBC /* SuperheroViewController.swift in Sources */,
 				98942B9E26FF914300BD9D98 /* HomeAssembly.swift in Sources */,
@@ -564,7 +658,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98942B5826FF8E9B00BD9D98 /* MarvelHeroesAppTests.swift in Sources */,
+				98670CE427030A2200898EB1 /* HomeViewMock.swift in Sources */,
+				98670CE927030A2200898EB1 /* HomeInteractorTests.swift in Sources */,
+				98670CF527031EB600898EB1 /* HomeBaseProviderMock.swift in Sources */,
+				98670CF027031C2F00898EB1 /* NavigationViewControllerMock.swift in Sources */,
+				98670CE227030A2200898EB1 /* HomeProviderMock.swift in Sources */,
+				98670CEC27030A2200898EB1 /* HomeViewTests.swift in Sources */,
+				98670CE527030A2200898EB1 /* HomeInteractorPresenterMock.swift in Sources */,
+				98670CE027030A2200898EB1 /* HomeRouterMock.swift in Sources */,
+				98670CE727030A2200898EB1 /* HomeRouterTests.swift in Sources */,
+				98670CE327030A2200898EB1 /* HomePresenterInteractorMock.swift in Sources */,
+				98670CE127030A2200898EB1 /* HomePresenterMock.swift in Sources */,
+				98670CEB27030A2200898EB1 /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +869,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SPLWYB8X9;
 				INFOPLIST_FILE = MarvelHeroesAppTests/Info.plist;
@@ -775,6 +881,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = AngelBayRo.MarvelHeroesAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MarvelHeroesApp.app/MarvelHeroesApp";
@@ -786,6 +893,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7SPLWYB8X9;
 				INFOPLIST_FILE = MarvelHeroesAppTests/Info.plist;
