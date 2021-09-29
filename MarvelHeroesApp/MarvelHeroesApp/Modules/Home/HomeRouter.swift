@@ -13,9 +13,9 @@ protocol HomeRouterProtocol: BaseRouterProtocol {
 }
 
 final class HomeRouter: BaseRouter {
-    weak var view: HomeViewProtocol? {
-        return super.baseView as? HomeViewProtocol
-    }
+  weak var view: HomeViewProtocol? {
+    return super.baseView as? HomeViewProtocol
+  }
 }
 
 extension HomeRouter: HomeRouterProtocol {

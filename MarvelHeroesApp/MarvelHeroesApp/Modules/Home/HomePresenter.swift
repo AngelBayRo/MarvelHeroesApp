@@ -25,15 +25,15 @@ class HomePresenter: BasePresenter {
   weak var view: HomeViewProtocol? {
     return super.baseView as? HomeViewProtocol
   }
-
+  
   var router: HomeRouterProtocol? {
     return super.baseRouter as? HomeRouterProtocol
   }
-
+  
   var interactor: HomeInteractorInputProtocol? {
     return super.baseInteractor as? HomeInteractorInputProtocol
   }
-
+  
   var contentModel: [SuperheroBusinessModel]? = []
 }
 
@@ -42,15 +42,15 @@ extension HomePresenter: HomePresenterProtocol {
   func viewDidLoad() {
     self.interactor?.getHeroes()
   }
-
+  
   func getHeroesCount() -> Int {
     return contentModel?.count ?? 0
   }
-
+  
   func getHeroData(position: Int) -> SuperheroBusinessModel {
     return contentModel?[position] ?? SuperheroBusinessModel()
   }
-
+  
   func goToHero(position: Int) {
     if let hero = contentModel?[position] {
       let heroDTO = SuperheroAssemblyDTO(characterImageThumb: hero.imageThumb,
@@ -61,7 +61,7 @@ extension HomePresenter: HomePresenterProtocol {
       self.router?.goToHero(dto: heroDTO)
     }
   }
-
+  
   func setActualImage(data: Data) {
     self.interactor?.setActualImageHero(data: data)
   }
@@ -73,7 +73,7 @@ extension HomePresenter: HomeInteractorOutputProtocol {
     self.contentModel?.append(contentsOf: content)
     self.view?.reloadTable()
   }
-
+  
   func showGetHeroesError() {
     self.view?.showEmptyState()
   }

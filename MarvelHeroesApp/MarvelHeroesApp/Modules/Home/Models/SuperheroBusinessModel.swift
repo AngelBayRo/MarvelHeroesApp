@@ -14,9 +14,9 @@ class SuperheroBusinessModel {
   var comics: Comics?
   var url: URLElement?
   var imageThumb: Thumbnail?
-
+  
   init() {}
-
+  
   init(serverModel: Result) {
     self.id = serverModel.id
     self.name = serverModel.name

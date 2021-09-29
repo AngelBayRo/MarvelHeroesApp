@@ -10,12 +10,12 @@ import Foundation
 class MarvelHeroCellModel {
   var name: String?
   var imageURL: String?
-
+  
   init(model: SuperheroBusinessModel) {
     self.name = model.name
     let path = model.imageThumb?.path ?? ""
     let extensionPath = model.imageThumb?.thumbnailExtension ?? ""
-
+    
     self.imageURL = "\(path).\(extensionPath)"
   }
 }

@@ -24,15 +24,15 @@ class SuperheroPresenter: BasePresenter {
   weak var view: SuperheroViewProtocol? {
     return super.baseView as? SuperheroViewProtocol
   }
-
+  
   var router: SuperheroRouterProtocol? {
     return super.baseRouter as? SuperheroRouterProtocol
   }
-
+  
   var interactor: SuperheroInteractorInputProtocol? {
     return super.baseInteractor as? SuperheroInteractorInputProtocol
   }
-
+  
   var comics: [HeroComicBusinessModel]?
 }
 
@@ -47,21 +47,21 @@ extension SuperheroPresenter: SuperheroPresenterProtocol {
     
     self.interactor?.setHeroComics()
   }
-
+  
   func goBack() {
     self.router?.goBack()
   }
-
+  
   func getUrlMoreInfo() {
     let url = self.interactor?.getUrlMoreData() ?? ""
-
+    
     self.router?.moreInfo(url: url)
   }
-
+  
   func getComicsCount() -> Int {
     return comics?.count ?? 0
   }
-
+  
   func getComicsData(position: Int) -> HeroComicBusinessModel {
     return comics?[position] ?? HeroComicBusinessModel()
   }

@@ -23,7 +23,7 @@ extension SuperheroRouter: SuperheroRouterProtocol {
   func goBack() {
     self.popViewController(animated: true)
   }
-
+  
   func moreInfo(url: String) {
     if let url = URL(string: url) {
       UIApplication.shared.open(url)

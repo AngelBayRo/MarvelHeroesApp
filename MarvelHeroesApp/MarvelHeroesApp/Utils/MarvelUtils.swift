@@ -26,11 +26,11 @@ class MarvelUtils {
   }
 
   static func value(key: String) -> String {
-      let environment = ProcessInfo.processInfo.environment
-      if let environmentValueString = environment[key] {
-        return environmentValueString
-      } else {
-        return ""
+    let environment = ProcessInfo.processInfo.environment
+    if let environmentValueString = environment[key] {
+      return environmentValueString
+    } else {
+      return ""
     }
   }
 

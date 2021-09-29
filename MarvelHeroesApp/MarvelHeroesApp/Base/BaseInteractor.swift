@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 class BaseInteractor {
-    // Declared weak for the ARC to destroy them.
-    internal weak var basePresenter: BaseInteractorOutputProtocol?
-
-    required init() {
-        //Not implemented
-    }
-
+  // Declared weak for the ARC to destroy them.
+  internal weak var basePresenter: BaseInteractorOutputProtocol?
+  
+  required init() {
+    //Not implemented
+  }
+  
 }

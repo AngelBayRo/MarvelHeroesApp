@@ -13,7 +13,7 @@ protocol BaseViewControllerProtocol: AnyObject {
 
 // Protocol used to the Presenter can communicate with View
 protocol BaseViewProtocol: AnyObject {
-
+  
 }
 
 // Protocol used to the View can communicate with Presenter
@@ -37,17 +37,17 @@ extension BasePresenterProtocol {
 
 // Protocol used to the Presenter can communicate with Interactor
 protocol BaseInteractorInputProtocol: AnyObject {
-
+  
 }
 
 // Protocol used to the Interactor can communicate with Presenter
 protocol BaseInteractorOutputProtocol: AnyObject {
-
+  
 }
 
 // Protocol used to the Presenter can communicate with Router
 protocol BaseRouterProtocol: AnyObject {
-
+  
 }
 
 // Protocol used to the Presenter can communicate with Router
@@ -63,16 +63,16 @@ protocol BaseProviderProtocol: AnyObject {
 
 // Base class used for encode params
 protocol BaseProviderParamsDTO: Codable {
-
+  
 }
 
 extension BaseProviderParamsDTO {
   func encode() -> [String: Any] {
-
+    
     guard let jsonData = try? JSONEncoder().encode(self),
           let json = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
     else { return [String: Any]() }
-
+    
     return json
   }
 }

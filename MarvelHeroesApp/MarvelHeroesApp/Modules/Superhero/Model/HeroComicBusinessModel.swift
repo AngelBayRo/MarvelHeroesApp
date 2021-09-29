@@ -10,9 +10,9 @@ import Foundation
 
 class HeroComicBusinessModel {
   var name: String?
-
+  
   init() {}
-
+  
   init(serverModel: ComicsItem) {
     self.name = serverModel.name
   }

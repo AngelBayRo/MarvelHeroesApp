@@ -19,27 +19,27 @@ final class HomeProvider: BaseProvider, HomeProviderProtocol {
     let dto = ProviderDTO(params: nil,
                           method: HomeProviderConstants.HomeProviderRequest.method,
                           endpoint: endpoint)
-
+    
     _ = self.getProviderData(dto: dto, success: { data, code in
       do {
         let superheroesServerModel = try JSONDecoder().decode(Superheroes.self, from: data)
-
+        
         success(superheroesServerModel)
       } catch {
         print(error)
         success(nil)
       }
-
+      
     }, failure: {
-        failure()
+      failure()
     })
-
+    
   }
 }
 
 private struct HomeProviderConstants {
-    struct HomeProviderRequest {
-        static let endpoint: String = "/v1/public/characters"
-        static let method: HTTPMethod = .get
-    }
+  struct HomeProviderRequest {
+    static let endpoint: String = "/v1/public/characters"
+    static let method: HTTPMethod = .get
+  }
 }
