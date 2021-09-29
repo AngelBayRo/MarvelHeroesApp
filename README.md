@@ -47,3 +47,12 @@ Marvel App with a list of heroes:
 * Error message with surprise!
 
 ## Screenshots
+* Main
+<img src="Screenshots/main.png" alt="drawing" width="200"/>
+
+* Detail
+<img src="Screenshots/detail.png" alt="drawing" width="200"/>
+
+## Meta
+
+Ángel Luis Bayón Romero - [LinkedIn](https://www.linkedin.com/in/angel-bay%C3%B3n-romero-73282013a/)
